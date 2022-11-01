@@ -91,11 +91,14 @@
   "devDependencies": {
     "@babel/core": "^7.19.6",
     "@babel/preset-env": "^7.19.4",
+    "autoprefixer": "^10.4.13",
     "babel-loader": "^9.0.0",
     "clean-webpack-plugin": "^4.0.0",
     "css-loader": "^6.7.1",
+    "cssnano": "^5.1.14",
     "html-webpack-plugin": "^5.5.0",
     "mini-css-extract-plugin": "^2.6.1",
+    "postcss-loader": "^7.0.1",
     "webpack-cli": "^4.10.0",
     "webpack-dev-server": "^4.11.1"
   },
