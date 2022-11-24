@@ -4,9 +4,135 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>Mesto</title>
 </head>
-<body>
-  <h1 class="cla">GGGGG</h1>
+
+<body class="page">
+
+  <header class="header">
+    <img src="<%=require('./images/Logo-white.svg')%>" alt="лого" class="header__logo">
+  </header>
+
+  <main class="main">
+
+    <section class="profile">
+      <img src="<%=require('./images/Avatar.jpg')%>" alt="фото профиля" class="profile__avatar">
+      <div class="profile__info">
+        <h1 class="profile__name">Жак-Ив Кусто</h1>
+        <p class="profile__description">Исследователь океана</p>
+      </div>
+      <button type="button" class=" edit-profile profile__edit-button" aria-label="Редактировать">
+        <img src="<%=require('./images/Edit-Button.svg')%>"  alt="Редактировать профиль" class="edit-profile__icon">
+      </button>
+      <button type="button" class="add-button profile__add-button" aria-label="Добавить">
+        <img src="<%=require('./images/Add-Button.svg')%>" alt="Добавить" class="add-button__icon">
+      </button>
+    </section>
+
+
+    <section>
+      <ul class="elements">
+
+        <!-- <li class="element">
+          <img src="https://pictures.s3.yandex.net/frontend-developer/cards-compressed/ivanovo.jpg" alt="фото Иваново"
+            class="element__foto">
+          <button type="button" class="element__delete">
+          </button>
+          <div class="element__item">
+            <h2 class="element__text">Иваново</h2>
+            <button type="button" class="element__heart">
+            </button>
+          </div>
+        </li>
+        <li class="element">
+          <img src="https://pictures.s3.yandex.net/frontend-developer/cards-compressed/kamchatka.jpg"
+            alt="фото Камчатка" class="element__foto">
+          <button type="button" class="element__delete">
+          </button>
+          <div class="element__item">
+            <h2 class="element__text">Камчатка</h2>
+            <button type="button" class="element__heart">
+            </button>
+          </div>
+        </li>
+        <li class="element">
+          <img src="https://pictures.s3.yandex.net/frontend-developer/cards-compressed/kholmogorsky-rayon.jpg"
+            alt="фото Холмогорский район" class="element__foto">
+          <button type="button" class="element__delete">
+          </button>
+          <div class="element__item">
+            <h2 class="element__text">Холмогорский район</h2>
+            <button type="button" class="element__heart">
+            </button>
+          </div>
+        </li>
+        <li class="element">
+          <img src="https://pictures.s3.yandex.net/frontend-developer/cards-compressed/baikal.jpg" alt="фото Байкал"
+            class="element__foto">
+          <button type="button" class="element__delete">
+          </button>
+          <div class="element__item">
+            <h2 class="element__text">Байкал</h2>
+            <button type="button" class="element__heart">
+            </button>
+          </div>
+        </li> -->
+      </ul>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p class="footer__copyright">©&nbsp;2022 Mesto Russia</p>
+  </footer>
+
+
+  <div class="popup" id="popup-profile">
+    <div class="popup__container">
+      <button type="button" class="popup__close"></button>
+      <form class="popup__form" name="mesto-profile">
+        <h3 class="popup__title">Редактировать профиль</h3>
+        <input type="text" class="popup__form-input" id="popup-name" placeholder="Имя">
+        <input type="text" class="popup__form-input" id="popup-description" placeholder="О себе">
+        <button type="submit" class="popup__button">Сохранить
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <div class="popup" id="popup-card">
+    <div class="popup__container">
+      <button type="button" class="popup__close" id="card-close">
+      </button>
+      <form class="popup__form" name="mesto-form">
+        <h3 class="popup__title">Новое место</h3>
+        <input type="text" class="popup__form-input" id="popup-name-card" placeholder="Название">
+        <input type="text" class="popup__form-input" id="popup-image" placeholder="Ссылка на картинку">
+        <button type="submit" class="popup__button">Сохранить</button>
+      </form>
+    </div>
+  </div>
+
+  <div class="popup popur-image" id="popup-big-image">
+    <figure class="popup-image__figure">
+      <button type="button" class="popup__close" id="image-close">
+      </button>
+      <img src="URL" alt="иллюстрация" class="popup-image__picture">
+      <figcaption class="popup-image__caption">
+      </figcaption>
+    </figure>
+  </div>
+
+  <template id="card-template">
+    <li class="element">
+      <img src="..src/images/elememts-karachaevsk.jpg" alt="фото Карачаевска" class="element__foto">
+      <button type="button" class="element__delete">
+      </button>
+      <div class="element__item">
+        <h2 class="element__text">Карачаевск</h2>
+        <button type="button" class="element__heart">
+        </button>
+      </div>
+    </li>
+  </template>
 </body>
 </html>

@@ -1,0 +1,35 @@
+.profile{
+  max-width: 880px;
+  margin: 0 auto;
+  margin-top: 40px;
+  display: grid;
+  grid-template-areas: 
+  "profile__avatar profile__info edit-profile profile__add-button"
+  "profile__avatar profile__info edit-profile profile__add-button";
+  grid-template-columns: 150px 312px 1fr 150px;
+	grid-template-rows: 77px 1fr;
+
+}
+
+@media (max-width: 680px) {
+	.profile {
+		max-width: 282px;
+		grid-template-areas: 
+		"profile__avatar profile__avatar profile__avatar"
+		"null profile__info edit-profile"
+		"profile__add-button profile__add-button profile__add-button";
+		grid-template-columns: 1fr 199px 1fr;
+		grid-template-rows: 140px 1fr 50px;
+	}
+}
+
+@media (min-width: 681px) and (max-width:879px){
+	.profile {
+		max-width: 680px; 
+		grid-template-areas: 
+		"profile__avatar profile__info edit-profile profile__add-button"
+		"profile__avatar profile__info edit-profile profile__add-button";
+		grid-template-columns: 150px 312px 1fr 150px;
+		grid-template-rows: 77px 1fr;
+	}
+}

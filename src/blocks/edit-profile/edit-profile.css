@@ -1,0 +1,18 @@
+.edit-profile {
+	display: flex;
+	width: 24px;
+	height: 24px;
+	border: 1px solid #fff;
+	box-sizing: border-box;
+	background: none;
+	cursor: pointer;
+	grid-area: edit-profile;
+	overflow: visible;
+}
+
+@media (max-width: 680px) {
+	.edit-profile {
+		width: 16px;
+		height: 16px;
+	}
+}

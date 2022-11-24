@@ -1,0 +1,8 @@
+.profile__add-button{
+  grid-area: profile__add-button;
+  margin-top: 35px;
+}
+
+.profile__add-button:hover{
+  opacity: 0.6;
+}
