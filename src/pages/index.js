@@ -165,5 +165,68 @@ imageClose.addEventListener('click', function (evn) {
     closePopup(popupImage);
 })
 
+// -------------------------------
+profileForm.addEventListener('input', e => {
+  const key = e.target.name;
+  const value = e.target.value;
+  const formData = new FormData(e.currentTarget);
+  const values = Object.fromEntries(formData);
+
+  const error = validate(key, value, values);
+
+
+  if (!error) {
+    return;
+  }
+
+  setError(key, error);
+});
+
+// ----------------------
+const validators = {
+  username: validateUsername
+  // about: validateAbout,
+};
+
+function validate(key, value){
+  const validator = validators[key];
+  return !validator(value);
+};
+
+function validateUsername (value) {
+  if(!value){
+    return 'Ошибкааа';
+  }
+
+  if(value.length < 2 ){ 
+    return false;
+  }
+
+  if(value.length > 30 ){ 
+    return false;
+  }
+
+  // if (preg_match( "/[^a-zа-яё ]/iu", $text)){
+  //   return false;
+  //   }
+    
+  return true;
+};
+
+function setError(key, errorMessage) {
+  const input = profileForm.querySelector(`.popup__form-input[name=${key}]`);
+  const inputGroup = input.parentElement;
+  const error = inputGroup.querySelector('.popup__error');
+
+  input.classList.add('popup__input_invalid');
+ 
+  error.textContent = 'Ошибка';
+  error.classList.remove('.popup__input_hidden');
+}
+
+// function clearError(key) {}
+
+
+
 
 

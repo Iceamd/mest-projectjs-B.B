@@ -91,8 +91,12 @@
       <button type="button" class="popup__close"></button>
       <form class="popup__form" name="mesto-profile">
         <h3 class="popup__title">Редактировать профиль</h3>
-        <input type="text" class="popup__form-input" id="popup-name" placeholder="Имя">
-        <input type="text" class="popup__form-input" id="popup-description" placeholder="О себе">
+        <div>
+        <input type="text" class="popup__form-input" id="popup-name" placeholder="Имя" name="username"/>
+        <p class="popup__error popup__error_hidden"></p>
+      </div>
+        <input type="text" class="popup__form-input" id="popup-description" placeholder="О себе" name="about"/>
+        <p class="popup__error popup__error_hidden "></p>
         <button type="submit" class="popup__button">Сохранить
         </button>
       </form>
