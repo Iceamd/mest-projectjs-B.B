@@ -91,14 +91,11 @@
       <button type="button" class="popup__close"></button>
       <form class="popup__form" name="mesto-profile">
         <h3 class="popup__title">Редактировать профиль</h3>
-        <div>
-        <input type="text" class="popup__form-input" id="popup-name" placeholder="Имя" name="username"/>
-        <p class="popup__error popup__error_hidden"></p>
-      </div>
-        <input type="text" class="popup__form-input" id="popup-description" placeholder="О себе" name="about"/>
-        <p class="popup__error popup__error_hidden "></p>
-        <button type="submit" class="popup__button">Сохранить
-        </button>
+        <input type="text" class="popup__form-input" id="popup-name" placeholder="Имя" name="username" autocomplete="off" minlength="2" maxlength="40" pattern="^[A-Za-zА-Яа-яЁё -]+$" required data-error-message="только латинские буквы, кириллические буквы, знаки дефиса и пробелы" data-error-message="Разрешены только латинские буквы, кириллические буквы, знаки дефиса и пробелы."/>
+        <span class="form__input_type_error"></span>
+        <input type="text" class="popup__form-input" id="popup-description" placeholder="О себе" name="about" autocomplete="off" minlength="2" maxlength="200" pattern="^[A-Za-zА-Яа-яЁё -]+$" required data-error-message="только латинские буквы, кириллические буквы, знаки дефиса и пробелы"/>
+        <span class="form__input_type_error"></span>
+        <button type="submit" class="popup__button">Сохранить </button>
       </form>
     </div>
   </div>
@@ -109,8 +106,10 @@
       </button>
       <form class="popup__form" name="mesto-form">
         <h3 class="popup__title">Новое место</h3>
-        <input type="text" class="popup__form-input" id="popup-name-card" placeholder="Название">
-        <input type="text" class="popup__form-input" id="popup-image" placeholder="Ссылка на картинку">
+        <input type="text" class="popup__form-input" id="popup-name-card" placeholder="Название" autocomplete="off" required pattern="^[A-Za-zА-Яа-яЁё -]+$" data-error-message="только латинские буквы, кириллические буквы, знаки дефиса и пробелы" minlength="2">
+        <span class="designation-text-error"></span>
+        <input type="text" class="popup__form-input" id="popup-image" placeholder="Ссылка на картинку" autocomplete="off" required>
+        <span class="image-link-text-error"></span>
         <button type="submit" class="popup__button">Сохранить</button>
       </form>
     </div>
